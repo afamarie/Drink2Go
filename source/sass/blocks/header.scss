@@ -1,5 +1,10 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: flex;
+  background-color: $base-white;
+}
+
+.header__navivation {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
