@@ -4,13 +4,19 @@
 }
 
 .hero-banner__slides-list {
-  margin: 0;
+  margin: 0 -20px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
 }
 
 .hero-banner__slides-list-item {
   display: flex;
+  padding: 20px 20px 40px 20px;
   flex-direction: column;
 
   &--flat-white {
@@ -25,7 +31,17 @@
     background-color: $espresso;
   }
 
+  .hero-banner__slides-list--no-js &:not(:first-child) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
   @media (min-width: $desktop-width) {
+    padding: 30px 40px 40px 40px;
     flex-direction: row;
   }
 }
@@ -34,13 +50,10 @@
   text-decoration: none;
   color: $base-black;
   display: flex;
-
-  &--image {
-    min-height: fit-content;
-    min-width: fit-content;
-  }
+  justify-content: center;
 
   &--text {
+    padding: 5px 0;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -56,6 +69,10 @@
     &--image {
       order: 1;
     }
+
+    &--text {
+      align-items: flex-start;
+    }
   }
 }
 
@@ -63,6 +80,15 @@
   display: flex;
   min-height: fit-content;
   min-width: fit-content;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .hero-banner__slide-image {
@@ -82,11 +108,73 @@
 }
 
 .hero-banner__slide-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
     order: 1;
+    padding-bottom: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: center;
+    align-items: flex-start;
     order: 2;
   }
+}
+
+.hero-banner__slide-label {
+  @include label;
+
+  margin: 0;
+  padding: 5px 0;
+}
+
+.hero-banner__slide-heading {
+  @include big-header;
+
+  margin: 0;
+  padding: 5px 0;
+}
+
+.hero-banner__slide-description {
+  @include big-paragraph;
+
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.hero-banner__slide-buy {
+  display: flex;
+  width: fit-content;
+  padding: 15px 0;
+}
+
+.hero-banner__slide-prices {
+}
+
+.hero-banner__slide-price {
+  margin: 0;
+
+  &--old {
+    @include old-price;
+    padding-right: 6px;
+  }
+
+  &--new {
+    @include new-price;
+    padding-right: 20px;
+  }
+}
+
+.hero-banner__slide-buy-button {
+  min-width: 113px;
 }

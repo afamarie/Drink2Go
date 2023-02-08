@@ -2,18 +2,18 @@
   margin: auto;
   display: flex;
   padding: 0;
+  flex-wrap: wrap;
   list-style: none;
   background-color: $base-white;
 
-  &--user-menu{
-
+  &--user-menu {
+    margin-right: 0;
   }
 
   @media (max-width: $mobile-only-width) {
     &--site-menu {
       position: absolute;
       flex-direction: column;
-      width: 100vw;
       top: 100%;
       left: 0;
       align-items: center;
@@ -25,6 +25,7 @@
     .header--no-js &--site-menu {
       position: static;
       transform: none;
+      margin-left: -20px;
       opacity: 1;
       order: 3;
     }
@@ -34,21 +35,67 @@
       opacity: 1;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    &--site-menu {
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
 }
 
 .header-link-list__list-item {
-
+  @media (max-width: $mobile-only-width) {
+    .header-link-list--site-menu &:first-child {
+      border-top: solid 2px $base-secondary;
+    }
+  }
 }
 
 .header-link-list__link {
   @include navigation;
 
+  position: relative;
+  display: flex;
+  padding: 20px;
+  align-items: center;
   color: $base-black;
   text-decoration: none;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+  transition: all 0.3s ease-in;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    .header-link-list--site-menu & {
+      display: flex;
+      box-sizing: border-box;
+      width: 100vw;
+      justify-content: center;
+      border-bottom: solid 2px $base-secondary;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &--current {
+      color: $base-primary;
+      border-bottom: solid 2px $base-primary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+  }
 }
 
 .header-link-list__title {
-
   @media (max-width: $tablet-only-width) {
     .header-link-list--user-menu & {
       @include visually-hidden;
@@ -57,5 +104,9 @@
 }
 
 .header-link-list__icon {
+  fill: currentColor;
 
+  @media (min-width: $desktop-width) {
+    padding-right: 8px;
+  }
 }

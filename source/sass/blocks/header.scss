@@ -6,9 +6,19 @@
 .header__navivation {
   position: relative;
   display: flex;
+  padding-left: 20px;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .header__button {
@@ -19,7 +29,6 @@
   width: 60px;
   height: 60px;
   padding: 22px;
-  order: 2;
   border: none;
 
   .header--no-js & {

@@ -7,6 +7,7 @@
   font-family: $general-font-family;
   color: $base-black;
   background-color: $base-white;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .visually-hidden {
@@ -20,4 +21,40 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  @include button;
+
+  padding: 5px 9px;
+  background-color: $base-primary;
+  border-radius: 4px;
+  color: $base-white;
+  font-family: "Montserrat", "Calibri", sans-serif;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  &--additional {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+
+  &--additional:hover,
+  &--additional:focus,
+  &--additional:active,
+  &--additional:disabled {
+    color: $base-white;
+  }
 }
