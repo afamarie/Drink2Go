@@ -1,0 +1,92 @@
+.product-filters {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.product-filters__fieldset {
+}
+
+.product-filters__fieldset-title {
+}
+
+.product-filters__filter-wrapper {
+  &--price-range {
+  }
+  &--price-input {
+  }
+  &--milk {
+  }
+  &--origin {
+  }
+}
+
+.product-filters__custom-range {
+}
+
+.product-filters__custom-range-bar {
+}
+
+.product-filters__custom-range-toggle {
+}
+
+.product-filters__filter-label {
+  &--radio {
+  }
+  &--checkbox-toggle {
+  }
+  &--disabled {
+  }
+}
+
+.product-filters__filter-input {
+  &--radio {
+  }
+  &--checkbox-toggle {
+  }
+}
+
+.product-filters__input-wrapper {
+  &--radio {
+  }
+  &--checkbox-toggle {
+  }
+}
+
+.product-filters__custom-input {
+  &--radio {
+  }
+  &--toggle {
+  }
+  &--checked {
+  }
+  &--disabled {
+  }
+}
+
+.product-filters__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    grid-column: 1 / -1;
+  }
+}
+
+.product-filters__button {
+  &--submit {
+  }
+
+  &----reset {
+  }
+}

@@ -1,0 +1,90 @@
+.footer {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.footer__logo-social {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.footer__social {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__social-item {
+}
+
+.footer__social-link {
+}
+
+.footer__social-icon {
+}
+
+.footer__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &--shop {
+  }
+
+  &--media {
+  }
+
+  &--contacts {
+
+  }
+}
+
+.footer__list-item {
+  &--title {
+  }
+  &--address {
+  }
+  &--contacts {
+  }
+}
+
+.footer__list-item-link {
+  &--title {
+  }
+  &--address {
+  }
+  &--phone {
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  grid-column: 1/-1;
+}
+
+.footer__copyright-link {
+  margin: auto;
+}
+
+.footer__copyright-text {
+}
+
+.footer__copyright-logo {
+}

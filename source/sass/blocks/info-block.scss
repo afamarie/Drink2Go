@@ -1,0 +1,110 @@
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-block__label {
+}
+
+.info-block__heading {
+}
+
+.info-block__advantages-list {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.info-block__advantages-list-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 88vw;
+
+  &--speed::after,
+  &--usage::after,
+  &--energy::after,
+  &--eco::after {
+    position: static;
+    display: flex;
+    margin: auto;
+    height: 56px;
+    width: 52px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    order: 1;
+  }
+
+  &--speed::after {
+    background-image: image-set(
+      url("../../img/icons/advantages/speed.webp") 1x,
+      url("../../img/icons/advantages/speed@2x.webp") 2x,
+      url("../../img/icons/advantages/speed.png") 1x,
+      url("../../img/icons/advantages/speed@2x.png") 2x);
+  }
+
+  &--usage::after {
+    background-image: image-set(
+      url("../../img/icons/advantages/usage.webp") 1x,
+      url("../../img/icons/advantages/usage@2x.webp") 2x,
+      url("../../img/icons/advantages/usage.png") 1x,
+      url("../../img/icons/advantages/usage@2x.png") 2x);
+  }
+
+  &--energy::after {
+    background-image: image-set(
+      url("../../img/icons/advantages/energy.webp") 1x,
+      url("../../img/icons/advantages/energy@2x.webp") 2x,
+      url("../../img/icons/advantages/energy.png") 1x,
+      url("../../img/icons/advantages/energy@2x.png") 2x);
+  }
+
+  &--eco::after {
+    background-image: image-set(
+      url("../../img/icons/advantages/eco.webp") 1x,
+      url("../../img/icons/advantages/eco@2x.webp") 2x,
+      url("../../img/icons/advantages/eco.png") 1x,
+      url("../../img/icons/advantages/eco2x.png") 2x);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    width: 44vw;
+
+    &--speed::after,
+    &--usage::after,
+    &--energy::after,
+    &--eco::after {
+      grid-column: 1/2;
+      grid-row: 1/-1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 315px;
+    display: flex;
+  }
+}
+
+.info-block__advantage-heading {
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1/2;
+  }
+}
+
+.info-block__advantage-description {
+  order: 3;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 2/-1;
+    grid-column: 2/-1;
+  }
+}

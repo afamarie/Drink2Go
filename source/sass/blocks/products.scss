@@ -1,0 +1,57 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $lightest-grey;
+}
+
+.products__label {
+}
+
+.products__heading {
+}
+
+.products__main-content-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.products__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__sort-form {
+  &--no-js {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.products__sort-fieldset {
+}
+
+.products__sort-title {
+}
+
+.products__sort-default {
+}
+
+.products__sort-arrow {
+}
+
+.products__sort-popular {
+}
+
+.products__sort-price {
+}

@@ -1,0 +1,46 @@
+.product-list {
+  display: grid;
+  margin: 0 auto;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.product-list__list-item {
+}
+
+.product-list__product-link {
+}
+
+.product-list__product-picture {
+}
+
+.product-list__product-name {
+}
+
+.product-list__product-descriptopn {
+}
+
+.product-list__product-buy {
+}
+
+.product-list__product-price {
+}
+
+.product-list__product-order-button {
+}
+
+.product-list__button-text {
+}
+
+.product-list__button-icon {
+}

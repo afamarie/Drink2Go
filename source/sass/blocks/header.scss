@@ -4,7 +4,71 @@
 }
 
 .header__navivation {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
+}
+
+.header__button {
+  @include button;
+
+  position: relative;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  padding: 22px;
+  order: 2;
+  border: none;
+
+  .header--no-js & {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__button-burger {
+  &,
+  &::after,
+  &::before {
+    display: flex;
+    width: 16px;
+    height: 2%;
+    background-color: $base-black;
+    transform-origin: center center;
+    transform: none;
+    transition: all 0.3s ease;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    top: 22px;
+  }
+
+  &::after {
+    bottom: 22px;
+  }
+
+  .header--opened & {
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+      top: calc(12.5% + 22px);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      bottom: calc(12.5% + 22px);
+    }
+  }
 }

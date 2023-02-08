@@ -25,14 +25,17 @@
     "sass": "1.56.1",
     "stylelint": "14.15.0",
     "stylelint-config-htmlacademy": "1.1.2",
-    "swiper": "9.0.3"
+    "swiper": "9.0.3",
+    "eslint": "8.15.0",
+    "eslint-config-htmlacademy": "6.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
-    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
+    "eslint": "eslint \"source/js/**/*.js\"",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter && npm run eslint",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"

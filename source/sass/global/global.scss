@@ -1,9 +1,12 @@
 .body {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
   flex-direction: column;
   min-height: 100%;
   font-family: $general-font-family;
   color: $base-black;
+  background-color: $base-white;
 }
 
 .visually-hidden {
