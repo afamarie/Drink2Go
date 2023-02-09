@@ -1,32 +1,54 @@
 .info-block {
   display: flex;
+  padding-top: 50px;
+  padding-bottom: 60px;
   flex-direction: column;
   align-items: center;
-}
 
-.info-block__label {
-}
+  @media (min-width: $tablet-width) {
+    padding-top: 248px;
+    padding-bottom: 50px;
+  }
 
-.info-block__heading {
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 44px;
+  }
 }
 
 .info-block__advantages-list {
   display: flex;
-  padding: 0;
+  margin: 0;
+  padding: 36px 0 0;
   flex-wrap: wrap;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding: 60px 10px 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 107px 0 54px;
+    gap: 0;
+  }
 }
 
 .info-block__advantages-list-item {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 20px;
   width: 88vw;
 
-  &--speed::after,
-  &--usage::after,
-  &--energy::after,
-  &--eco::after {
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &::after {
     position: static;
     display: flex;
     margin: auto;
@@ -68,43 +90,80 @@
       url("../../img/icons/advantages/eco.webp") 1x,
       url("../../img/icons/advantages/eco@2x.webp") 2x,
       url("../../img/icons/advantages/eco.png") 1x,
-      url("../../img/icons/advantages/eco2x.png") 2x);
+      url("../../img/icons/advantages/eco@2x.png") 2x);
   }
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
     width: 44vw;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: max-content 2fr;
+    grid-template-rows: min-content min-content;
+    gap: 10px 20px;
 
-    &--speed::after,
-    &--usage::after,
-    &--energy::after,
-    &--eco::after {
+    &::after {
+      margin-top: 0;
       grid-column: 1/2;
       grid-row: 1/-1;
     }
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 315px;
     display: flex;
+    max-width: 315px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    & + & {
+      padding-left: 30px;
+    }
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
+
+    &::after {
+      margin-bottom: 0;
+    }
   }
 }
 
 .info-block__advantage-heading {
+  @include smaller-header;
+
+  margin: 0;
+  padding: 10px 0 4px 0;
   order: 2;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     grid-row: 1/2;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 0 10px;
+    text-align: center;
   }
 }
 
 .info-block__advantage-description {
+  @include small-paragraph;
+
+  margin: 0;
   order: 3;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     grid-row: 2/-1;
     grid-column: 2/-1;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
   }
 }

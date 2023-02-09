@@ -5,6 +5,7 @@
   color: $base-black;
   text-decoration: none;
   margin-right: auto;
+  padding: 10px 20px;
 
   &--footer {
     flex-direction: column;
@@ -12,12 +13,8 @@
   }
 }
 
-.logo-link__picture-set {
-
-}
-
 .logo-link__picture {
-
+  object-fit: contain;
 }
 
 .logo-link__caption {

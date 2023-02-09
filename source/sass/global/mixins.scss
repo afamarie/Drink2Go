@@ -95,12 +95,12 @@
 @mixin small-paragraph {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 

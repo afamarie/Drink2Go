@@ -10,9 +10,11 @@
 }
 
 .main__section-label {
+  @include label;
 
+  padding-bottom: 4px;
 }
 
 .main__section-heading {
-
+  @include small-header;
 }
