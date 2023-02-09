@@ -18,6 +18,8 @@
 }
 
 .logo-link__caption {
+  margin: 0;
+
   @media (max-width: $tablet-only-width) {
     @include visually-hidden;
   }
@@ -25,13 +27,13 @@
   .logo-link--header & {
     @include smaller-paragraph;
 
-    margin-left: 20px;
+    padding-left: 20px;
     max-width: 126px;
   }
 
   .logo-link--footer & {
-    @include small-paragraph;
-
-    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
