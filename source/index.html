@@ -186,11 +186,11 @@
           </li>
         </ul>
       </section>
-      <section class="products">
+      <section class="catalog">
         <h2 class="visually-hidden">Каталог кофейных напитков Drink2Go.</h2>
-        <b class="main__section-label products__label">Каталог</b>
-        <b class="main__section-heading products__heading">Каталог кофейных напитков</b>
-        <div class="products__main-content-wrapper">
+        <b class="main__section-label catalog__label">Каталог</b>
+        <b class="main__section-heading catalog__heading">Каталог кофейных напитков</b>
+        <div class="catalog__main-content-wrapper">
           <form class="product-filters" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
             <b class="visually-hidden">Фильтр товаров по параметрам.</b>
             <fieldset class="product-filters__fieldset">
@@ -271,22 +271,22 @@
               <button class="product-filters__button product-filters__button--reset button button--additional" type="reset">Сбросить фильтр</button>
             </div>
           </form>
-          <article class="products__list-wrapper">
-            <form class="products__sort-form" action="index.html" autocomplete="off" method="get">
-              <fieldset class="products__sort-fieldset">
-                <legend class="products__sort-title">Сортировка:</legend>
-                <button class="products__sort-default" type="button">По умолчанию
-                  <span class="products__sort-arrow"></span>
+          <article class="catalog__list-wrapper">
+            <form class="catalog__sort-form" action="index.html" autocomplete="off" method="get">
+              <fieldset class="catalog__sort-fieldset">
+                <legend class="catalog__sort-title">Сортировка:</legend>
+                <button class="catalog__sort-default" type="button">По умолчанию
+                  <span class="catalog__sort-arrow"></span>
                 </button>
-                <button class="products__sort-popular" type="button">По популярности
-                  <span class="products__sort-arrow"></span>
+                <button class="catalog__sort-popular" type="button">По популярности
+                  <span class="catalog__sort-arrow"></span>
                 </button>
-                <button class="products__sort-price" type="button">По цене
-                  <span class="products__sort-arrow"></span>
+                <button class="catalog__sort-price" type="button">По цене
+                  <span class="catalog__sort-arrow"></span>
                 </button>
               </fieldset>
             </form>
-            <ul class="products__product-list product-list">
+            <ul class="catalog__product-list product-list">
               <li class="product-list__list-item">
                 <a class="product-list__product-link" href="#">
                   <picture class="product-list__picture-set">
@@ -300,7 +300,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
@@ -318,7 +320,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
@@ -336,8 +340,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
@@ -355,7 +360,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
@@ -373,7 +380,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
@@ -391,7 +400,9 @@
                 <div class="product-list__product-buy">
                   <span class="product-list__product-price">225&#x20bd;</span>
                   <button class="product-list__product-order-button button" type="button">
-                    <svg class="product-list__button-icon" width="20" height="16"></svg>
+                    <svg class="product-list__button-icon" width="20" height="16">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6738 13.5219L13.6769 13.5H15.0238L14.9937 13.7105C14.8061 15.0242 13.6809 16 12.3539 16H3.64612C2.31905 16 1.19393 15.0242 1.00626 13.7105L0.190476 8L0 6.66667H1.34687H4.55556L4.33218 3.98618C4.15336 1.84036 5.84674 0 8 0C9.81376 0 11.3012 1.30578 11.6183 3H10.2473C9.95698 2.04197 9.06703 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546L5.89351 6.66667H9.5V8H6.05787L6.28009 10.6667H9.71991L9.7338 10.5H11.0718L11.0579 10.6667H12.5V12H10.9468L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324ZM15.8 10V7.2H13V5.8H15.8V3H17.2V5.8H20V7.2H17.2V10H15.8Z"/>
+                    </svg>
                     <span class="product-list__button-text">Заказать</span>
                   </button>
                 </div>
