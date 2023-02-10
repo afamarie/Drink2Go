@@ -130,16 +130,8 @@
 
 /*Form items*/
 
-@mixin form-title {
+@mixin form-text {
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-@mixin form-label {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
@@ -151,9 +143,11 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /*HIDDEN*/

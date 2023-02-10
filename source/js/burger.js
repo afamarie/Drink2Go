@@ -10,6 +10,6 @@ const onClickToggleMenu = () => {
   } else {
     header.classList.add('header--opened');
   }
-}
+};
 
 navToggle.addEventListener('click', onClickToggleMenu);

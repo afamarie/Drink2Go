@@ -192,47 +192,56 @@
         <b class="main__section-heading catalog__heading">Каталог кофейных напитков</b>
         <div class="catalog__main-content-wrapper">
           <form class="product-filters" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-            <b class="visually-hidden">Фильтр товаров по параметрам.</b>
             <fieldset class="product-filters__fieldset">
               <legend class="product-filters__fieldset-title">Цена</legend>
               <div class="product-filters__filter-wrapper product-filters__filter-wrapper--price-range">
                 <div class="product-filters__custom-range">
                   <div class="product-filters__custom-range-bar">
-                    <button class="product-filters__custom-range-toggle" type="button"><span class="visually-hidden">Изменить минимальную цену.</span></button>
-                    <button class="product-filters__custom-range-toggle" type="button"><span class="visually-hidden">Изменить максимальную цену.</span></button>
+                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--min" type="button" id="price-min-toggle"><span class="visually-hidden">Изменить минимальную цену.</span></button>
+                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--max" type="button" id="price-max-toggle"><span class="visually-hidden">Изменить максимальную цену.</span></button>
                   </div>
                 </div>
-                <div class="product-filters__filter-wrapper product-filters__filter-wrapper--price-input">
-                  <label class="product-filters__filter-label visually-hidden">Минимальная цена.</label>
-                  <input class="product-filters__filter-input" id="price-min" name="price-min" type="text" placeholder="0" readonly>
-                  <span class="product-filters__filter-label">&nbsp; –</span>
-                  <label class="product-filters__filter-label visually-hidden">Максимальная цена.</label>
-                  <input class="product-filters__filter-input" id="price-max" name="price-max" type="text" placeholder="0" readonly>
-                </div>
+                <div class="product-filters__price-input-wrapper">
+                  <label class="product-filters__filter-label" aria-label="Минимальная цена">
+                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-min" name="price-min" type="text" placeholder="0" readonly>
+                  </label>
+                  <span class="product-filters__dash"> &mdash; </span>
+                  <label class="product-filters__filter-label" aria-label="Максимальная цена">
+                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-max" name="price-max" type="text" placeholder="0" readonly>
+                  </label>
+                  </div>
               </div>
             </fieldset>
             <fieldset class="product-filters__fieldset">
               <legend class="product-filters__fieldset-title">Наличие молока</legend>
               <ul class="product-filters__filter-wrapper product-filters__filter-wrapper--milk">
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--radio">
-                  <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_no-matter" name="milk" value="no-matter" type="radio" checked>
-                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_no-matter">Неважно</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--radio product-filters__custom-input--checked"></span>
+                  <label class="product-filters__filter-label" for="milk_no-matter">
+                    <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_no-matter" name="milk" value="no-matter" type="radio" checked>
+                    <span class="product-filters__custom-input product-filters__custom-input--radio product-filters__custom-input--checked"></span>
+                    <span class="product-filters__text">Неважно</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--radio">
-                  <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_animal" name="milk" value="animal" type="radio">
-                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_animal">Только животное</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--radio"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_animal">
+                    <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_animal" name="milk" value="animal" type="radio">
+                    <span class="product-filters__custom-input product-filters__custom-input--radio"></span>
+                    <span class="product-filters__text">Только животное</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--radio">
-                  <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_plant" name="milk" value="plant" type="radio">
-                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_plant">Только растительное</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--radio"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_plant">
+                    <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_plant" name="milk" value="plant" type="radio">
+                    <span class="product-filters__custom-input product-filters__custom-input--radio"></span>
+                    <span class="product-filters__text">Только растительное</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--radio">
-                  <input class="product-filters__filter-input product-filters__filter-input--radio visually-hidden" id="milk_no-milk" name="milk" value="no-milk" type="radio" disabled>
-                  <label class="product-filters__filter-label product-filters__filter-label--radio product-filters__filter-label--disabled" for="milk_no-milk">Без молока</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--radio product-filters__custom-input--disabled"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--radio" for="milk_no-milk">
+                    <input class="product-filters__filter-input product-filters__filter-input--radio product-filters__filter-input--disabled visually-hidden" id="milk_no-milk" name="milk" value="no-milk" type="radio" disabled>
+                    <span class="product-filters__custom-input product-filters__custom-input--radio"></span>
+                    <span class="product-filters__text">Без молока</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -240,29 +249,39 @@
               <legend class="product-filters__fieldset-title">Страна произрастания</legend>
               <ul class="product-filters__filter-wrapper product-filters__filter-wrapper--origin">
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--checkbox-toggle">
-                  <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_brasil" name="origin" value="brasil" type="checkbox" checked>
-                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_brasil">Бразилия</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--toggle product-filters__custom-input--checked"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_brasil">
+                    <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_brasil" name="origin" value="brasil" type="checkbox" checked>
+                    <span class="product-filters__custom-input product-filters__custom-input--toggle product-filters__custom-input--checked"></span>
+                    <span class="product-filters__text">Бразилия</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--checkbox-toggle">
-                  <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_ethiopia" name="origin" value="ethiopia" type="checkbox">
-                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_ethiopia">Эфиопия</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_ethiopia">
+                    <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_ethiopia" name="origin" value="ethiopia" type="checkbox">
+                    <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                    <span class="product-filters__text">Эфиопия</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--checkbox-toggle">
-                  <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_colombia" name="origin" value="colombia" type="checkbox">
-                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_colombia">Колумбия</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_colombia">
+                    <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_colombia" name="origin" value="colombia" type="checkbox">
+                    <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                    <span class="product-filters__text">Колумбия</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--checkbox-toggle">
-                  <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_costa-rica" name="origin" value="costa-rica" type="checkbox">
-                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_costa-rica">Коста-Рика</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle" for="origin_costa-rica">
+                    <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_costa-rica" name="origin" value="costa-rica" type="checkbox">
+                    <span class="product-filters__custom-input product-filters__custom-input--toggle"></span>
+                    <span class="product-filters__text">Коста-Рика</span>
+                  </label>
                 </li>
                 <li class="product-filters__input-wrapper product-filters__input-wrapper--checkbox-toggle">
-                  <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_peru" name="origin" value="peru" type="checkbox" disabled>
-                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle product-filters__filter-label--disabled" for="origin_peru">Перу</label>
-                  <span class="product-filters__custom-input product-filters__custom-input--toggle product-filters__custom-input--disabled"></span>
+                  <label class="product-filters__filter-label product-filters__filter-label--checkbox-toggle product-filters__filter-label--disabled" for="origin_peru">
+                    <input class="product-filters__filter-input product-filters__filter-input--checkbox-toggle visually-hidden" id="origin_peru" name="origin" value="peru" type="checkbox" disabled>
+                    <span class="product-filters__custom-input product-filters__custom-input--toggle product-filters__custom-input--disabled"></span>
+                    <span class="product-filters__text">Перу</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -272,18 +291,27 @@
             </div>
           </form>
           <article class="catalog__list-wrapper">
-            <form class="catalog__sort-form" action="index.html" autocomplete="off" method="get">
-              <fieldset class="catalog__sort-fieldset">
-                <legend class="catalog__sort-title">Сортировка:</legend>
-                <button class="catalog__sort-default" type="button">По умолчанию
-                  <span class="catalog__sort-arrow"></span>
-                </button>
-                <button class="catalog__sort-popular" type="button">По популярности
-                  <span class="catalog__sort-arrow"></span>
-                </button>
-                <button class="catalog__sort-price" type="button">По цене
-                  <span class="catalog__sort-arrow"></span>
-                </button>
+            <form class="catalog__sort-form sort-form" action="index.html" autocomplete="off" method="get">
+              <fieldset class="sort-form__sort-fieldset">
+                <legend class="visually-hidden">Сортировка.</legend>
+                <span class="sort-form__sort-title">Сортировка:</span>
+                <div class="sort-form__sort-drop-down">
+                  <button class="sort-form__open-button" type="button">По умолчанию</button>
+                  <ul class="sort-form__sort-buttons-list">
+                    <li class="sort-form__sort-buttons-list-item">
+                      <button class="sort-form__sort-button" type="button" id="sort-default">По умолчанию</button>
+                    </li>
+                    <li class="sort-form__sort-buttons-list-item">
+                      <button class="sort-form__sort-button" type="button" id="sort-high-price">Сначала дорогие</button>
+                    </li>
+                    <li class="sort-form__sort-buttons-list-item">
+                      <button class="sort-form__sort-button" type="button" id="sort-low-price">Сначала дешевые</button>
+                    </li>
+                    <li class="sort-form__sort-buttons-list-item">
+                      <button class="sort-form__sort-button" type="button" id="sort-hight-rated">Высокий рейтинг</button>
+                    </li>
+                  </ul>
+                </div>
               </fieldset>
             </form>
             <ul class="catalog__product-list product-list">

@@ -1,0 +1,145 @@
+.sort-form {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.sort-form__sort-fieldset {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  padding: 0;
+  justify-content: space-between;
+  border: none;
+  margin: 0 auto;
+}
+
+.sort-form__sort-title {
+  @include form-text;
+
+  display: flex;
+  margin: auto 0;
+  font-weight: 600;
+}
+
+.sort-form__sort-drop-down {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  min-width: 180px;
+}
+
+.sort-form__open-button {
+  position: relative;
+  margin-left: auto;
+  padding: 9px 30px 9px 9px;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: end;
+  color: $base-primary;
+  text-transform: lowercase;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    top: calc(50% - 2px);
+    right: 12px;
+    width: 7px;
+    height: 2px;
+    background-color: $base-primary;
+    content: "";
+    transition: all 0.3s ease;
+  }
+
+  &::after {
+    transform-origin: top left;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform-origin: top right;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  .sort-form__sort-drop-down--opened &::after {
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  .sort-form__sort-drop-down--opened &::before {
+    transform-origin: bottom right;
+    transform: rotate(45deg);
+    top: 50%;
+  }
+}
+
+.sort-form__sort-buttons-list {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  right: 0;
+  list-style: none;
+  background: $base-white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  .sort-form__sort-drop-down--opened & {
+    display: flex;
+  }
+}
+
+.sort-form__sort-buttons-list-item {
+  display: flex;
+  background-color: $base-white;
+  border-top-color: $base-secondary;
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}
+
+.sort-form__sort-button {
+  @include button;
+
+  display: flex;
+  padding: 8px 20px;
+  justify-content: flex-start;
+  text-transform: lowercase;
+  border: none;
+  background-color: transparent;
+  color: $base-black;
+
+  &:active {
+    color: $base-white;
+  }
+}

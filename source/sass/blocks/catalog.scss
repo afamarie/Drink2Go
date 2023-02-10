@@ -7,8 +7,8 @@
   background-color: $lightest-grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 80px;
-    padding-bottom: 90px;
+    margin: 0 -40px;
+    padding: 80px 40px 90px;
   }
 }
 
@@ -20,6 +20,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 30px;
   }
 }
 
@@ -27,32 +28,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.catalog__sort-form {
-  &--no-js {
-    display: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-left: auto;
-  }
-}
-
-.catalog__sort-fieldset {
-}
-
-.catalog__sort-title {
-}
-
-.catalog__sort-default {
-}
-
-.catalog__sort-arrow {
-}
-
-.catalog__sort-popular {
-}
-
-.catalog__sort-price {
 }
