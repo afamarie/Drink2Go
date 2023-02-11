@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   list-style: none;
   background-color: $base-white;
+  z-index: 2;
 
   &--user-menu {
     margin-right: 0;

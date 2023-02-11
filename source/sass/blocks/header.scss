@@ -26,11 +26,16 @@
   padding: 22px;
   border: none;
 
-  .header--no-js & {
-    display: none;
+  &:active {
+    background-color: $base-secondary;
   }
 
   @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  /*Hide button if js doesn't work*/
+  .header--no-js & {
     display: none;
   }
 }

@@ -9,6 +9,7 @@
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
@@ -69,15 +70,15 @@
       </nav>
       <button class="header__button" type="button">
         <span class="visually-hidden">Открыть меню.</span>
-        <span class="header__button-burger">
+        <span class="header__button-burger"></span>
       </button>
     </header>
     <main class="main">
       <section class="hero-banner">
         <h2 class="visually-hidden">Новинки Drink2Go.</h2>
-        <div class="hero-banner__slider">
-          <ul class="hero-banner__slides-list hero-banner__slides-list--no-js">
-            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--flat-white">
+        <div class="hero-banner__slider hero-banner__slider--no-js swiper">
+          <ul class="hero-banner__slides-list slider--no-js swiper-wrapper">
+            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--flat-white swiper-slide">
               <a class="hero-banner__slide-link hero-banner__slide-link--image" href="#">
                 <picture class="hero-banner__picture-set">
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/banners/flat-white_desktop.webp, img/banners/flat-white_desktop@2x.webp 2x">
@@ -88,24 +89,25 @@
                   <img class="hero-banner__slide-image" src="img/banners/flat-white.png" srcset="img/banners/flat-white@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
                 </picture>
               </a>
-                <div class="hero-banner__slide-information">
-                  <a class="hero-banner__slide-link hero-banner__slide-link--text" href="#">
-                    <b class="hero-banner__slide-label">Новинка!</b>
-                    <h3 class="hero-banner__slide-heading">Декаф Флэт Уайт</h3>
-                    <p class="hero-banner__slide-description">Свежесваренный кофе без кофеина из Эфиопии
+              <div class="hero-banner__slide-information">
+                <a class="hero-banner__slide-link hero-banner__slide-link--text" href="#">
+                  <b class="hero-banner__slide-label">Новинка!</b>
+                  <h3 class="hero-banner__slide-heading">Декаф Флэт Уайт</h3>
+                  <p class="hero-banner__slide-description">Свежесваренный кофе без кофеина из Эфиопии
                       с натуральным фермерским молоком — то, что нужно
-                      для расслабления после тяжёлого рабочего дня</p>
-                  </a>
-                  <div class="hero-banner__slide-buy">
+                      для расслабления после тяжёлого рабочего дня
+                  </p>
+                </a>
+                <div class="hero-banner__slide-buy">
                     <div class="hero-banner__slide-prices">
                       <span class="hero-banner__slide-price hero-banner__slide-price--old">295&#x20bd;</span>
                       <span class="hero-banner__slide-price hero-banner__slide-price--new">225&#x20bd;</span>
                     </div>
                     <a class="hero-banner__slide-buy-button button" href="#">Заказать</a>
-                  </div>
+                </div>
               </div>
             </li>
-            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--lavender">
+            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--lavender swiper-slide">
               <a class="hero-banner__slide-link hero-banner__slide-link--image" href="#">
               <picture class="hero-banner__picture-set">
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/banners/lavender_desktop.webp, img/banners/lavender_desktop@2x.webp 2x">
@@ -113,7 +115,7 @@
                 <source type="image/webp" srcset="img/banners/lavender.webp, img/banners/lavender@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/banners/lavender_desktop.png, img/banners/lavender_desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/banners/lavender_tablet.png, img/banners/lavender_tablet@2x.png 2x">
-                <img class="hero-banner__slide-image" src="img/banners/lavender.png" srcset="img/banners/lavender@2x.png 2x"width="280" height="280" alt="Лавандовый Латте">
+                <img class="hero-banner__slide-image" src="img/banners/lavender.png" srcset="img/banners/lavender@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
               </picture>
             </a>
               <div class="hero-banner__slide-information">
@@ -131,7 +133,7 @@
                 </div>
               </div>
             </li>
-            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--espresso">
+            <li class="hero-banner__slides-list-item hero-banner__slides-list-item--espresso swiper-slide">
               <a class="hero-banner__slide-link hero-banner__slide-link--image" href="#">
                 <picture class="hero-banner__picture-set">
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/banners/espresso_desktop.webp, img/banners/espresso_desktop@2x.webp 2x">
@@ -139,7 +141,7 @@
                   <source type="image/webp" srcset="img/banners/espresso.webp, img/banners/espresso@2x.webp 2x">
                   <source media="(min-width: 1150px)" srcset="img/banners/espresso_desktop.png, img/banners/espresso_desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/banners/espresso_tablet.png, img/banners/espresso_tablet@2x.png 2x">
-                  <img class="hero-banner__slide-image" src="img/banners/espresso.png" srcset="img/banners/espresso@2x.png 2x"width="280" height="280" alt="Тройной Эспрессо">
+                  <img class="hero-banner__slide-image" src="img/banners/espresso.png" srcset="img/banners/espresso@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо">
                 </picture>
               </a>
               <div class="hero-banner__slide-information">
@@ -158,6 +160,9 @@
               </div>
             </li>
           </ul>
+          <div class="swiper-pagination hero-banner__pagination"></div>
+          <div class="swiper-button-prev hero-banner__button hero-banner__button--prev"></div>
+          <div class="swiper-button-next hero-banner__button hero-banner__button--next"></div>
         </div>
       </section>
       <section class="info-block">
@@ -194,7 +199,7 @@
           <form class="product-filters" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
             <fieldset class="product-filters__fieldset">
               <legend class="product-filters__fieldset-title">Цена</legend>
-              <div class="product-filters__filter-wrapper product-filters__filter-wrapper--price-range">
+              <div class="product-filters__range-wrapper">
                 <div class="product-filters__custom-range">
                   <div class="product-filters__custom-range-bar">
                     <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--min" type="button" id="price-min-toggle"><span class="visually-hidden">Изменить минимальную цену.</span></button>
@@ -209,7 +214,7 @@
                   <label class="product-filters__filter-label" aria-label="Максимальная цена">
                     <input class="product-filters__filter-input product-filters__filter-input--text" id="price-max" name="price-max" type="text" placeholder="0" readonly>
                   </label>
-                  </div>
+                </div>
               </div>
             </fieldset>
             <fieldset class="product-filters__fieldset">
@@ -318,7 +323,7 @@
               <li class="product-list__list-item">
                 <a class="product-list__product-link" href="#">
                   <picture class="product-list__picture-set">
-                    <source type="image/webp" srcset="img/products/coffee-can-1.webp, img/products/coffee-can-2@2x.webp 1x">
+                    <source type="image/webp" srcset="img/products/coffee-can-1.webp, img/products/coffee-can-1@2x.webp 2x">
                     <img class="product-list__product-picture" src="img/products/coffee-can-1.png" srcset="img/products/coffee-can-1@2x.png 2x" width="130" height="180" alt="Декаф Флэт Уайт">
                   </picture>
                   <h3 class="product-list__product-name">Декаф Флэт Уайт</h3>
@@ -533,6 +538,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js" defer type="module"></script>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>

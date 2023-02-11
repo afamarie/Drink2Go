@@ -1,12 +1,11 @@
 .hero-banner {
   display: flex;
-  flex-direction: column;
+  min-width: 0;
 }
 
-.hero-banner__slides-list {
+.hero-banner__slider {
+  position: relative;
   margin: 0 -20px;
-  padding: 0;
-  list-style: none;
 
   @media (min-width: $desktop-width) {
     margin-left: -40px;
@@ -14,10 +13,20 @@
   }
 }
 
+.hero-banner__slides-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 0;
+}
+
 .hero-banner__slides-list-item {
   display: flex;
+  box-sizing: border-box;
   padding: 20px 20px 40px 20px;
+  height: fit-content;
   flex-direction: column;
+
 
   &--flat-white {
     background-color: $flat-white;
@@ -31,18 +40,37 @@
     background-color: $espresso;
   }
 
-  .hero-banner__slides-list--no-js &:not(:first-child) {
+  /*Show only first slide if js doesn't work*/
+
+  .hero-banner__slider--no-js &:nth-of-type(n + 2) {
     display: none;
   }
 
   @media (min-width: $tablet-width) {
+    position: relative;
     padding-top: 55px;
     padding-bottom: 0;
-  }
 
-  @media (min-width: $desktop-width) {
-    padding: 30px 40px 40px 40px;
-    flex-direction: row;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 188px;
+      width: 100%;
+      content: "";
+      background-color: $base-white;
+      border: 5px solid $base-white;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      padding: 30px 40px 40px 40px;
+      flex-direction: row;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 
@@ -81,13 +109,8 @@
   min-height: fit-content;
   min-width: fit-content;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: -188px;
-  }
-
   @media (min-width: $desktop-width) {
     margin-right: 30px;
-    margin-bottom: 0;
   }
 }
 
@@ -158,9 +181,6 @@
   padding: 15px 0;
 }
 
-.hero-banner__slide-prices {
-}
-
 .hero-banner__slide-price {
   margin: 0;
 
@@ -177,4 +197,109 @@
 
 .hero-banner__slide-buy-button {
   min-width: 113px;
+}
+
+/*Swiper pagination and buttons*/
+
+.hero-banner__button {
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 20px;
+  bottom: 0;
+  z-index: 1;
+  background-color: transparent;
+
+  &--next {
+    right: 0;
+    transform: scale(-1, 1);
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 10px;
+    height: 2px;
+    top: 318px;
+    left: 5px;
+    background-color: $base-primary;
+    content: "";
+  }
+
+  &::after {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+  &::before {
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, $base-white 0%, transparent 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, $primary-opacity 0%, transparent 100%);
+  }
+
+  &--disabled::after,
+  &--disabled::before,
+  &:disabled::after,
+  &:disabled::before {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    bottom: 198px;
+
+    &::after,
+    &::before {
+      top: 510px;
+      left: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+
+    &::after,
+    &::before {
+      top: 347px;
+    }
+  }
+}
+
+.hero-banner__pagination {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    width: max-content;
+    bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+
+    .swiper-pagination-bullet {
+      display: inline-block;
+      width: 62px;
+      height: 4px;
+      background-color: $base-white;
+      cursor: pointer;
+    }
+
+    .swiper-pagination-bullet + .swiper-pagination-bullet {
+      margin-left: 8px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $base-primary;
+    }
+  }
 }

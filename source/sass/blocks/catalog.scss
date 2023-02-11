@@ -6,7 +6,7 @@
   align-items: center;
   background-color: $lightest-grey;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 -40px;
     padding: 80px 40px 90px;
   }

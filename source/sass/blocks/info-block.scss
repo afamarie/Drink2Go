@@ -6,12 +6,11 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 248px;
+    padding-top: 60px;
     padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
     padding-bottom: 44px;
   }
 }
