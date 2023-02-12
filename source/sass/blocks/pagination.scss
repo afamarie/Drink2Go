@@ -1,0 +1,117 @@
+.pagination {
+  @include form-text;
+
+  display: flex;
+  height: max-content;
+  flex-grow: 1;
+  align-items: center;
+  justify-items: center;
+  color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.pagination_button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: $base-white;
+  color: $base-primary;
+  text-align: center;
+  transition: all 0.3s ease;
+  font: inherit;
+  cursor: pointer;
+
+  &--prev {
+    margin-right: 20px;
+  }
+
+  &--next {
+    margin-left: 20px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    &::after,
+    &::before {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: 7px;
+      height: 2px;
+      background-color: $base-primary;
+      content: "";
+    }
+
+    &--prev::after {
+      transform-origin: top left;
+      transform: rotate(45deg);
+    }
+
+    &--prev::before {
+      transform-origin: bottom left;
+      transform: rotate(-45deg);
+    }
+
+    &--next::before {
+      transform-origin: bottom right;
+      transform: rotate(45deg);
+    }
+
+    &--next::after {
+      transform-origin: top right;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 150px;
+  }
+}
+
+.pagination_button-text {
+  @media (max-width: $mobile-only-width) {
+    @include visually-hidden;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.pagination__list-item {
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.pagination__list-custom-input {
+  display: inline-block;
+  padding: 8px;
+  min-width: 40px;
+  min-height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: $base-white;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .pagination__input[type="radio"]:checked ~ & {
+    color: $base-black;
+    font-weight: 600;
+    background-color: transparent;
+  }
+}
+

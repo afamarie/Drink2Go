@@ -86,6 +86,7 @@
   border-radius: 50%;
   background-color: $base-white;
   border: solid 2px $primary-lighter;
+  appearance: none;
 
   &::after {
     position: absolute;
@@ -200,7 +201,7 @@
   }
 
   &--radio {
-    width: 20px;
+    min-width: 20px;
     background-color: $base-white;
     border: solid 2px $primary-lighter;
 
@@ -231,7 +232,7 @@
   }
 
   &--toggle {
-    width: 38px;
+    min-width: 38px;
     background-color: $base-grey;
     border: 2px solid transparent;
 

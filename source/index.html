@@ -10,6 +10,7 @@
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
@@ -202,17 +203,17 @@
               <div class="product-filters__range-wrapper">
                 <div class="product-filters__custom-range">
                   <div class="product-filters__custom-range-bar">
-                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--min" type="button" id="price-min-toggle"><span class="visually-hidden">Изменить минимальную цену.</span></button>
-                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--max" type="button" id="price-max-toggle"><span class="visually-hidden">Изменить максимальную цену.</span></button>
+                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--min" type="button" id="price-min-toggle" tabindex="0"><span class="visually-hidden">Изменить минимальную цену.</span></button>
+                    <button class="product-filters__custom-range-toggle product-filters__custom-range-toggle--max" type="button" id="price-max-toggle" tabindex="0"><span class="visually-hidden">Изменить максимальную цену.</span></button>
                   </div>
                 </div>
                 <div class="product-filters__price-input-wrapper">
                   <label class="product-filters__filter-label" aria-label="Минимальная цена">
-                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-min" name="price-min" type="text" placeholder="0" readonly>
+                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-min" name="price-min" type="text" placeholder="0" readonly tabindex="0">
                   </label>
                   <span class="product-filters__dash"> &mdash; </span>
                   <label class="product-filters__filter-label" aria-label="Максимальная цена">
-                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-max" name="price-max" type="text" placeholder="0" readonly>
+                    <input class="product-filters__filter-input product-filters__filter-input--text" id="price-max" name="price-max" type="text" placeholder="0" readonly tabindex="0">
                   </label>
                 </div>
               </div>
@@ -441,12 +442,38 @@
                 </div>
               </li>
             </ul>
+            <div class="pagination">
+              <button class="pagination_button pagination_button--prev" tabindex="0">
+                <span class="pagination_button-text">Назад</span>
+              </button>
+              <ul class="pagination__list">
+                <li class="pagination__list-item">
+                  <label class="pagination__list-label" tabindex="0">
+                    <input class="pagination__input visually-hidden" type="radio" name="pagination" value="1">
+                    <span class="pagination__list-custom-input">1</span>
+                  </label>
+                </li>
+                <li class="pagination__list-item">
+                  <label class="pagination__list-label" tabindex="0">
+                    <input class="pagination__input visually-hidden" type="radio" name="pagination" value="2" checked>
+                    <span class="pagination__list-custom-input">2</span>
+                  </label>
+                </li>
+                <li class="pagination__list-item">
+                  <label class="pagination__list-label">
+                    <input class="pagination__input visually-hidden" type="radio" name="pagination" value="3">
+                    <span class="pagination__list-custom-input" tabindex="0">3</span>
+                  </label>
+                </li>
+              </ul>
+              <button class="pagination_button pagination_button--next" tabindex="0"><span class="pagination_button-text">Вперёд</span></button>
+            </div>
           </article>
         </div>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Адрес Drink2Go.</h2>
-        <div class="map__leaflet-container"></div>
+        <div class="map__leaflet-container" id="map" width="320" height="420"></div>
       </section>
     </main>
     <footer class="footer">
@@ -523,10 +550,10 @@
           <a class="footer__list-item-link footer__list-item-link--title" href="#">Контакты</a>
         </li>
         <li class="footer__list-item footer__list-item">
-          <a class="footer__list-item-link footer__list-item-link--address" href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+          <p class="footer__list-item-link footer__list-item-link--address" >Санкт-Петербург, набережная реки Карповки, дом 5</p>
         </li>
         <li class="footer__list-item footer__list-item">
-          <a class="footer__list-item-link footer__list-item-link--phone" href="#">+7 (999) 999-99-99</a>
+          <a class="footer__list-item-link footer__list-item-link--phone" rel="nofollow" href="tel:+79999999999">+7 (999) 999-99-99</a>
         </li>
       </ul>
       <div class="footer__copyright">
@@ -539,5 +566,6 @@
       </div>
     </footer>
     <script src="js/script.js" type="module"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
   </body>
 </html>

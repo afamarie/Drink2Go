@@ -1,0 +1,22 @@
+.map {
+  display: flex;
+  margin: 0 -20px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 -40px;
+  }
+}
+
+.map__leaflet-container {
+  display: flex;
+  width: 100vw;
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
