@@ -12,7 +12,11 @@
 .main__section-label {
   @include label;
 
-  padding-bottom: 4px;
+  padding: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .main__section-heading {

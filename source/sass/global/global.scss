@@ -26,11 +26,11 @@
 .button {
   @include button;
 
-  padding: 9px 5px;
+  font-size: 14px;
+  line-height: 20px;
   background-color: $base-primary;
   border-radius: 4px;
   color: $base-white;
-  font-family: "Montserrat", "Calibri", sans-serif;
   border: none;
 
   &:hover,

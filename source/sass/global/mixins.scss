@@ -16,8 +16,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 56px;
+    line-height: 80px;
   }
 }
 
@@ -139,11 +139,10 @@
 /*BUTTONS*/
 
 @mixin button {
-  display: flex;
+  display: inline-block;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  font-family: inherit;
+  vertical-align: middle;
+  font-family: "Montserrat", "Calibri", sans-serif;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;

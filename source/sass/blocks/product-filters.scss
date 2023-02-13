@@ -1,16 +1,20 @@
 .product-filters {
   display: flex;
-  padding: 20px 0;
+  padding: 22px 0 18px;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
     display: grid;
+    padding-top: 25px;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 21px;
+    gap: 20px 15px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    padding-top: 10px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    gap: 33px;
   }
 }
 
@@ -18,40 +22,59 @@
   display: flex;
   flex-direction: column;
   border: none;
-  margin: 0 2px;
+  margin: 0 -2px;
   padding: 0;
 
-  & + & {
-    padding-bottom: 25px;
+  @media (min-width: $desktop-width) {
+    max-width: 320px;
+    grid-column: 1/-1;
   }
 }
 
 .product-filters__fieldset-title {
   @include form-text;
 
+  padding: 0;
   font-weight: 600;
 }
 
 .product-filters__filter-wrapper {
   display: grid;
   margin: 0;
-  padding: 25px 0;
-  gap: 22px;
+  padding: 22px 0;
+  list-style: none;
 
   &--milk {
-    list-style: none;
+    gap: 23px;
   }
 
   &--origin {
-    list-style: none;
+    gap: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 0;
+
+    &--milk {
+      gap: 20px;
+    }
   }
 }
 
 .product-filters__range-wrapper {
   display: grid;
   margin: 0;
-  padding: 25px 0;
-  gap: 22px;
+  padding: 20px 0 25px;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 10px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 0;
+  }
 }
 
 .product-filters__custom-range {
@@ -174,6 +197,10 @@
   @media (min-width: $tablet-width) {
     max-width: 12vw;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 134px;
+  }
 }
 
 .product-filters__custom-input {
@@ -232,6 +259,7 @@
   }
 
   &--toggle {
+    margin-left: 3px;
     min-width: 38px;
     background-color: $base-grey;
     border: 2px solid transparent;
@@ -281,23 +309,45 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 12px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
     grid-column: 1 / -1;
+    padding: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding: 5px 0;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
   }
 }
 
 .product-filters__button {
+  padding: 13px 10px;
+
   & + & {
     margin-top: 25px;
   }
 
   @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+
     & + & {
-      margin-left: 25px;
+      margin-left: 30px;
       margin-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 11px 3px;
+
+    & + & {
+      margin-left: 0;
     }
   }
 }

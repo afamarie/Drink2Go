@@ -26,7 +26,6 @@
     .header--no-js &--site-menu {
       position: static;
       transform: none;
-      margin-left: -20px;
       opacity: 1;
       order: 3;
     }
@@ -51,6 +50,12 @@
       border-top: solid 2px $base-secondary;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    & + & {
+      margin-left: 20px;
+    }
+  }
 }
 
 .header-link-list__link {
@@ -59,10 +64,10 @@
   position: relative;
   display: flex;
   padding: 20px;
+  box-sizing: border-box;
   align-items: center;
   text-decoration: none;
-  border-top: solid 2px transparent;
-  border-bottom: solid 2px transparent;
+  border: solid 2px transparent;
   transition: all 0.3s ease-in;
 
   &:active {
@@ -80,8 +85,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 30px 20px;
 
     &--current {
       color: $base-primary;

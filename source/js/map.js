@@ -1,3 +1,6 @@
+const container = document.querySelector('.map__leaflet-container');
+container.style = '';
+
 const map = L.map('map')
   .on('load', () => {
   })
@@ -29,4 +32,4 @@ const mainPinMarker = L.marker(
   },
 );
 
-mainPinMarker.addTo(map)
+mainPinMarker.addTo(map);

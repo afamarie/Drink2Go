@@ -11,7 +11,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 44px;
+    padding-top: 80px;
+    padding-bottom: 15px;
   }
 }
 
@@ -24,23 +25,26 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    padding: 60px 10px 50px;
+    padding: 63px 10px 50px;
     grid-template-columns: 1fr 1fr;
     gap: 50px 30px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding: 107px 0 54px;
+    padding: 80px 0 54px;
+    width: 100%;
+    justify-content: space-between;
     gap: 0;
   }
 }
 
 .info-block__advantages-list-item {
   display: flex;
-  flex-direction: column;
+  padding-bottom: 32px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
   width: 88vw;
 
   &:last-child {
@@ -110,13 +114,13 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    max-width: 315px;
-    box-sizing: border-box;
-    margin: 0 auto;
     padding-bottom: 50px;
+    max-width: 320px;
+    box-sizing: border-box;
+    gap: 0;
 
     & + & {
-      padding-left: 30px;
+      padding-left: 5px;
     }
 
     &:last-child {
@@ -144,7 +148,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 25px 0 10px;
+    padding: 22px 0 10px;
     text-align: center;
   }
 }

@@ -48,14 +48,14 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 0;
 
     &::after {
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 188px;
+      height: 180px;
       width: 100%;
       content: "";
       background-color: $base-white;
@@ -64,7 +64,7 @@
 
     @media (min-width: $desktop-width) {
       position: static;
-      padding: 30px 40px 40px 40px;
+      padding: 30px 40px 85px 40px;
       flex-direction: row;
 
       &::after {
@@ -75,32 +75,14 @@
 }
 
 .hero-banner__slide-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
   color: $base-black;
-  display: flex;
-  justify-content: center;
-
-  &--text {
-    padding: 5px 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  @media (min-width: $tablet-width) {
-    &--image {
-      order: 2;
-    }
-  }
 
   @media (min-width: $desktop-width) {
-    &--image {
-      order: 1;
-    }
-
-    &--text {
-      align-items: flex-start;
-    }
+    align-items: flex-start;
   }
 }
 
@@ -108,9 +90,17 @@
   display: flex;
   min-height: fit-content;
   min-width: fit-content;
+  justify-content: center;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    order: 2;
+  }
 
   @media (min-width: $desktop-width) {
-    margin-right: 30px;
+    padding-top: 0;
+    padding-left: 65px;
   }
 }
 
@@ -137,15 +127,16 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
-    padding-bottom: 5px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: center;
-    align-items: flex-start;
+    padding-top: 150px;
+    padding-left: 30px;
     order: 2;
+    align-items: flex-start;
+    margin-bottom: auto;
   }
 }
 
@@ -153,24 +144,38 @@
   @include label;
 
   margin: 0;
-  padding: 5px 0;
+  padding-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
 }
 
 .hero-banner__slide-heading {
   @include big-header;
 
   margin: 0;
-  padding: 5px 0;
+  padding: 4px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .hero-banner__slide-description {
   @include big-paragraph;
 
   margin: 0;
-  padding: 5px 0;
+  padding: 6px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    padding: 12px;
+  }
+
   @media (min-width: $desktop-width) {
+    padding: 16px 0 20px;
     text-align: left;
   }
 }
@@ -178,7 +183,15 @@
 .hero-banner__slide-buy {
   display: flex;
   width: fit-content;
-  padding: 15px 0;
+  padding: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 0;
+  }
 }
 
 .hero-banner__slide-price {
@@ -197,6 +210,7 @@
 
 .hero-banner__slide-buy-button {
   min-width: 113px;
+  padding: 10px 20px;
 }
 
 /*Swiper pagination and buttons*/
@@ -221,9 +235,9 @@
     position: absolute;
     display: inline-block;
     box-sizing: border-box;
-    width: 10px;
+    width: 13px;
     height: 2px;
-    top: 318px;
+    top: 327px;
     left: 5px;
     background-color: $base-primary;
     content: "";
@@ -257,49 +271,69 @@
 
   @media (min-width: $tablet-width) {
     width: 80px;
-    bottom: 198px;
+    bottom: 190px;
 
     &::after,
     &::before {
       top: 510px;
-      left: 30px;
+      left: 35px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 0;
+    bottom: 22px;
 
     &::after,
     &::before {
-      top: 347px;
+      top: 380px;
     }
+  }
+
+  .hero-banner__slider--no-js & {
+    display: none;
   }
 }
 
 .hero-banner__pagination {
+  display: none;
+
   @media (min-width: $desktop-width) {
     position: relative;
     display: flex;
     width: max-content;
-    bottom: 70px;
+    bottom: 85px;
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
 
-    .swiper-pagination-bullet {
-      display: inline-block;
-      width: 62px;
-      height: 4px;
-      background-color: $base-white;
-      cursor: pointer;
+    .hero-banner__slider--no-js & {
+      display: none;
     }
+  }
+}
 
-    .swiper-pagination-bullet + .swiper-pagination-bullet {
-      margin-left: 8px;
-    }
+.swiper-pagination-bullet {
+  position: relative;
+  display: inline-block;
+  width: 62px;
+  height: 22px;
+  cursor: pointer;
 
-    .swiper-pagination-bullet-active {
-      background-color: $base-primary;
-    }
+  & + & {
+    margin-left: 8px;
+  }
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    height: 4px;
+    background-color: $base-white;
+    content: "";
+  }
+
+  &-active::after {
+    background-color: $base-primary;
   }
 }

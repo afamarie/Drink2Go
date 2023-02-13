@@ -1,14 +1,19 @@
 .catalog {
   display: flex;
   margin: 0 -20px;
-  padding: 50px 20px 44px;
+  padding: 45px 20px;
   flex-direction: column;
   align-items: center;
   background-color: $lightest-grey;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
   @media (min-width: $desktop-width) {
     margin: 0 -40px;
-    padding: 80px 40px 90px;
+    padding: 100px 40px 90px;
   }
 }
 
@@ -19,8 +24,9 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 30px;
+    padding-top: 36px;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
   }
 }
 
