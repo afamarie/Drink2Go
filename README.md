@@ -27,6 +27,6 @@ Frontpage for a coffee shop. Prictice project as part of education at [HTML Acad
 
 ```bash
 npm i # Install
-npm start # Local server
+npm run start # Local server
 npm run build # Project build, minification of scripts and optimization of images before deployment to prod
 ```
