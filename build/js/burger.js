@@ -1,0 +1,1 @@
+const header=document.querySelector(".header"),navToggle=document.querySelector(".header__button");header.classList.remove("header--no-js");const onClickToggleMenu=()=>{header.classList.contains("header--opened")?header.classList.remove("header--opened"):header.classList.add("header--opened")};navToggle.addEventListener("click",onClickToggleMenu);

@@ -1,0 +1,1 @@
+const wrapper=document.querySelector(".hero-banner__slider");wrapper.classList.remove("hero-banner__slider--no-js");const swiper=new Swiper(".hero-banner__slider",{loop:!0,slidesPerView:1,watchSlidesProgress:!0,pagination:{el:".hero-banner__pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},autoHeight:!0});export{swiper};

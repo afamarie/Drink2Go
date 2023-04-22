@@ -1,16 +1,12 @@
-const wrapper = document.querySelector('.hero-banner__slider');
-wrapper.classList.remove('hero-banner__slider--no-js');
 
-const swiper = new Swiper('.hero-banner__slider', {
+const wrapper = document.querySelector('.swiper');
+wrapper.classList.remove('swiper--no-js');
+
+const swiper = new Swiper('.swiper', {
 
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 4,
   watchSlidesProgress: true,
-
-  pagination: {
-    el: '.hero-banner__pagination',
-    clickable: true,
-  },
 
   navigation: {
     nextEl: '.swiper-button-next',
